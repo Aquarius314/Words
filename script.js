@@ -53,12 +53,9 @@ function updateResults() {
   wrong.innerHTML = "✕ : " + badAnswers + " kurwo";
 }
 
-var words = [
-  ["koń", "le cheval"],
-  ["ja", "je"]
-];
-
 // cosmetics
+
+wordBox.value = words[0][0];
 
 ok.style.color = "green";
 wrong.style.color = "red";
