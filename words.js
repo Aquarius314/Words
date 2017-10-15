@@ -39,7 +39,7 @@ var words = [ ["koń", "le cheval"],
   ["kiedy", "quand"],
   ["chcieć", "vouloir"],
   ["mały", "petit"],
-  ["więcej", "plus"],[""]
+  ["więcej", "plus"],
   ["na, na czymś", "sur"],
   ["lub", "ou"],
   ["inny, drugi, odmienny", "autre"],
