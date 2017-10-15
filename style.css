@@ -1,5 +1,26 @@
 body {
-  background-color: lightgreen;
-  width: 80%;
+  background-color: lightblue;
+  width: 30%;
   margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+div.row {
+  display: block;
+  text-align: center;
+}
+
+textarea {
+  margin: 10px;
+  resize: none;
+  height: 50px;
+  width: 100%;
+}
+
+p {
+  margin-left: 47%; 
+  /*margin: 0 auto;*/
 }
