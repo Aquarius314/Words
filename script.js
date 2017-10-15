@@ -2,6 +2,7 @@ var answer = "";
 var correct = false;
 var answerBox = document.getElementById('answer');
 var wordBox = document.getElementById('word');
+var resultBox = document.getElementById('result');
 var iterator = 0;
 var goodAnswers = 0;
 var badAnswers = 0;
@@ -36,10 +37,13 @@ function submitAnswer() {
   answerBox.value = "";
   if (checkAnswer(answer)) {
     goodAnswers++;
+    result.value = "Prawidłowa odpowiedź!\n";
   } else {
     badAnswers++;
     repeatWordAtEnd();
+    result.value = "Źle! Prawidłowa odpowiedź:\n";
   }
+  result.value += word + " -> " + words[iterator][1];
   chooseNextWord();
   updateResults();
 }
