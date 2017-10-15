@@ -57,7 +57,7 @@ function checkAnswer(a) {
 function updateResults() {
   ok.innerHTML = "✓ : " + goodAnswers;
   wrong.innerHTML = "✕ : " + badAnswers;
-  left.innerHTML = "Pozostało : " + wordsLeft;
+  left.innerHTML = "Pozostało : " + (wordsLeft-goodAnswers);
 }
 
 // cosmetics
