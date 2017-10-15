@@ -1,8 +1,5 @@
-html {
-  color: lightgreen;
-}
-
 body {
+  background-color: lightgreen;
   width: 80%;
   margin: 0 auto;
 }
