@@ -6,9 +6,11 @@ var resultBox = document.getElementById('result');
 var iterator = 0;
 var goodAnswers = 0;
 var badAnswers = 0;
+var wordsLeft = words.length;
 
 var ok = document.getElementById('ok');
 var wrong = document.getElementById('wrong');
+var left = document.getElementById('wordsLeft');
 
 document.addEventListener("keypress", function(event) {
   if (event.keyCode == "13") {
@@ -53,8 +55,9 @@ function checkAnswer(a) {
 }
 
 function updateResults() {
-  ok.innerHTML = "✓ : " + goodAnswers + " kurwo";
-  wrong.innerHTML = "✕ : " + badAnswers + " kurwo";
+  ok.innerHTML = "✓ : " + goodAnswers;
+  wrong.innerHTML = "✕ : " + badAnswers;
+  left.innerHTML = "Pozostało : " + wordsLeft;
 }
 
 // cosmetics
