@@ -11,6 +11,7 @@ var wordsLeft = words.length;
 var ok = document.getElementById('ok');
 var wrong = document.getElementById('wrong');
 var left = document.getElementById('wordsLeft');
+var percentage = document.getElementById('percentage');
 
 document.addEventListener("keypress", function(event) {
   if (event.keyCode == "13") {
@@ -58,6 +59,7 @@ function updateResults() {
   ok.innerHTML = "✓ : " + goodAnswers;
   wrong.innerHTML = "✕ : " + badAnswers;
   left.innerHTML = "Pozostało : " + (wordsLeft-goodAnswers);
+  percentage.innerHTML = "Trafność : " + (goodAnswers*1.0/(goodAnswers+badAnswers)) + "%";
 }
 
 // cosmetics
@@ -66,3 +68,4 @@ wordBox.value = words[0][0];
 
 ok.style.color = "green";
 wrong.style.color = "red";
+percentage.style.color = "darkblue";
