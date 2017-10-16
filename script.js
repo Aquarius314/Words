@@ -59,7 +59,7 @@ function updateResults() {
   ok.innerHTML = "✓ : " + goodAnswers;
   wrong.innerHTML = "✕ : " + badAnswers;
   left.innerHTML = "Pozostało : " + (wordsLeft-goodAnswers);
-  percentage.innerHTML = "Trafność : " + (goodAnswers*1.0/(goodAnswers+badAnswers)) + "%";
+  percentage.innerHTML = "Trafność : " + (goodAnswers*100.0/(goodAnswers+badAnswers)) + "%";
 }
 
 // cosmetics
