@@ -9,6 +9,11 @@
   <div class="row">
     <textarea class="word" id="word" readonly>słówko</textarea>
   </div>
+
+  <div class="row">
+    <textarea class="result" id="result" readonly>Odpowiedź</textarea>
+  </div>
+
   <div class="row">
     <textarea class="answer" id="answer" autofocus></textarea>
   </div>
@@ -16,11 +21,19 @@
   <p id="wrong">✕ : 0</p>
   <p id="wordsLeft"></p>
   <p id="percentage"></p>
-  <div class="row">
-    <textarea class="result" id="result" readonly>Odpowiedź</textarea>
-  </div>
-  <script src="words.js"></script>
+
+  <script src="words/podstawowe.js"></script>
+  <script src="words/czasowniki.js"></script>
   <script src="script.js"></script>
 
-  <h1>btw kocham Martę :) </h1>
+  <div id="buttonsDiv">
+    <button class="chooseWords" id="podstawowe">Podstawowe</button>
+    <button class="chooseWords" id="czasowniki">Czasowniki</button>
+  </div>
+  <script>
+    document.getElementById('podstawowe').onclick = function () { chooseWordSet(podstawowe); };
+    document.getElementById('czasowniki').onclick = function () { chooseWordSet(czasowniki); };
+  </script>
+
+
 </body>

@@ -1,4 +1,4 @@
-var words = [ ["koń", "le cheval"],
+var podstawowe = [ ["koń", "le cheval"],
   ["ja", "je"],
   ["ten", "ce"],
   ["mój, moja, moje", "mon, ma, mes"],

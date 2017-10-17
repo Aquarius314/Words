@@ -20,7 +20,25 @@ textarea {
   width: 100%;
 }
 
+textarea#result {
+  display: none;
+  text-align: center;
+  width: 60%;
+  height: 35px;
+  margin: 0 auto;
+  color: red;
+}
+
 p {
-  margin-left: 43%; 
+  margin-left: 43%;
   /*margin: 0 auto;*/
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  border: 2px solid black;
+  width: 100px;
+  border-radius: 5px;
 }

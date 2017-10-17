@@ -6,6 +6,7 @@ var resultBox = document.getElementById('result');
 var iterator = 0;
 var goodAnswers = 0;
 var badAnswers = 0;
+var words = podstawowe;
 var wordsLeft = words.length;
 
 var ok = document.getElementById('ok');
@@ -40,10 +41,11 @@ function submitAnswer() {
   answerBox.value = "";
   if (checkAnswer(answer)) {
     goodAnswers++;
-    result.value = "Prawidłowa odpowiedź!\n";
+    result.style.display = "none";
   } else {
     badAnswers++;
     repeatWordAtEnd();
+    result.style.display = "block";
     result.value = "Źle! Prawidłowa odpowiedź:\n";
   }
   result.value += word + " -> " + words[iterator][1];
@@ -60,6 +62,17 @@ function updateResults() {
   wrong.innerHTML = "✕ : " + badAnswers;
   left.innerHTML = "Pozostało : " + (wordsLeft-goodAnswers);
   percentage.innerHTML = "Trafność : " + (goodAnswers*100.0/(goodAnswers+badAnswers)) + "%";
+}
+
+function chooseWordSet(set) {
+  words = set;
+  goodAnswers = 0;
+  badAnswers = 0;
+  iterator = -1;
+  chooseNextWord();
+  answer = "";
+  wordsLeft = words.length;
+  updateResults();
 }
 
 // cosmetics
